@@ -95,6 +95,7 @@ function validateSingleField($element) {
 	let $item = $element.attr('id');
 	cleanMsg($item);
 	if (JSON.parse(localStorage[$item]) === false) {
+		$('#' + $item).css('border', '1px solid red');
 		$('#' + $item)
 			.next()
 			.show();
@@ -103,6 +104,7 @@ function validateSingleField($element) {
 			.next()
 			.show();
 	} else {
+		$('#' + $item).css('border', '1px solid green');
 		$('#' + $item)
 			.next()
 			.next()
