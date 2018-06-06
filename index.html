@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h2>Form</h2>
+    </header>
+    <div class="container">
+
+
+        <form>
+            <input type="text" placeholder="Name" id="name" class="input">
+            <i class="fas fa-times-circle"></i>
+            <p id="name-error">Please enter a valid name</p>
+            <i class="fas fa-check-circle"></i>
+
+            <input type="text" placeholder="Age" id="age" maxlength="2" class="input">
+            <i class="fas fa-times-circle"></i>
+            <p id="age-error">Please enter a valid age</p>
+            <i class="fas fa-check-circle"></i>
+            <input type="text" placeholder="Phone" id="phone" class="input">
+            <i class="fas fa-times-circle"></i>
+            <p id="phone-error">Please enter a valid phone</p>
+            <i class="fas fa-check-circle"></i>
+            <input type="text" placeholder="Email" id="email" class="input">
+            <i class="fas fa-times-circle"></i>
+            <p id="email-error">Please enter a valid email</p>
+            <i class="fas fa-check-circle"></i>
+            <textarea name="About" id="about" cols="30" rows="10" placeholder="Something about yourself" class="input"></textarea>
+            <i class="fas fa-times-circle"></i>
+            <p id="about-error">Please enter a valid text</p>
+            <i class="fas fa-check-circle"></i>
+            <button class="inactive" disabled="true" id="button">Send</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
