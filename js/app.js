@@ -93,6 +93,7 @@ function validateFields(event) {
 function validateSingleField($element) {
 	$($element).css('width', '94%');
 	let $item = $element.attr('id');
+	cleanMsg($item);
 	if (JSON.parse(localStorage[$item]) === false) {
 		$('#' + $item)
 			.next()
@@ -108,4 +109,19 @@ function validateSingleField($element) {
 			.next()
 			.show();
 	}
+}
+
+function cleanMsg($item) {
+	$('#' + $item)
+		.next()
+		.hide();
+	$('#' + $item)
+		.next()
+		.next()
+		.hide();
+	$('#' + $item)
+		.next()
+		.next()
+		.next()
+		.hide();
 }
