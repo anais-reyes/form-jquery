@@ -1,8 +1,7 @@
 $(document).ready(function() {
 	cleanStorage();
 	addEvent();
-	$('#button').click(validateFields);
-	$('#button').click(sendSuccessMsg);
+	addClickEvents();
 });
 
 var patterns = {
@@ -10,7 +9,7 @@ var patterns = {
 	age: /^\d{1,2}$/,
 	phone: /^\d{10}$/,
 	email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z{2,8}])?$/,
-	about: /.{20,100}/,
+	about: /^.{10,20}$/,
 };
 
 function cleanStorage() {
@@ -21,6 +20,11 @@ function addEvent() {
 	$('.input').each(function() {
 		setEvents($(this));
 	});
+}
+
+function addClickEvents() {
+	$('#button').click(validateFields);
+	$('#button').click(sendSuccessMsg);
 }
 
 function sendSuccessMsg() {
@@ -76,7 +80,7 @@ function setEvents($item) {
 
 function validInput() {
 	var id = $(this).attr('id');
-	if (patterns[id].test(event.target.value)) {
+	if (patterns[id].test($(this).val())) {
 		localStorage.setItem(id, 'true');
 	} else {
 		localStorage.setItem(id, 'false');
